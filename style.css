@@ -2,11 +2,11 @@
   border: 5px solid #ffb6c1;
   border-radius: 32px;
   box-shadow: 0 0 40px 10px #ffb6c1a0, 0 0 0 10px #fff1 inset;
-  padding: 24px 32px 24px 32px; /* tăng padding hai bên */
+  padding: 24px 24px 24px 24px; /* tăng padding hai bên */
   background: rgba(255,255,255,0.03);
   backdrop-filter: blur(2px);
-  max-width: 320px; /* giảm max-width để không sát viền */
-  width: 90vw;
+  max-width: 340px;
+  width: 95vw; /* giảm width để không sát viền */
   min-height: 480px;
   text-align: center;
   position: relative;
@@ -19,24 +19,24 @@
   width: 100%;
   max-width: 260px;
   height: auto; /* giữ nguyên tỉ lệ ảnh */
+  aspect-ratio: 340/180; /* giữ tỉ lệ khi trên điện thoại */
   margin: 0 auto 20px auto;
   display: block;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 24px #ffb6c1a0, 0 0 0 6px #fff2 inset;
   background: #fff;
-  align-items: center;
-  justify-content: center;
 }
 @media (max-width: 600px) {
   .outer-border {
     max-width: 92vw;
     width: 92vw;
-    padding: 10px 5vw 10px 5vw; /* padding hai bên lớn hơn */
+    padding: 10px 4vw 10px 4vw; /* padding hai bên lớn hơn */
     min-height: 340px;
   }
   .flower-svg {
-    max-width: 90vw;
+    max-width: 88vw;
     height: auto;
+    aspect-ratio: 340/180; /* giữ tỉ lệ hoa khi trên điện thoại */
   }
 }
