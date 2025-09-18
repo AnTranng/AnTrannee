@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoa nở tặng Ánh yêu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at center, #000 70%, #232526 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+    .outer-border {
+      border: 5px solid #ffb6c1;
+      border-radius: 40px;
+      box-shadow: 0 0 40px 10px #ffb6c1a0, 0 0 0 10px #fff1 inset;
+      padding: 48px 32px 32px 32px;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(2px);
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+    .title {
+      color: #ffb6c1;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+      text-shadow: 0 0 18px #fff, 0 2px 8px #e75480;
+      letter-spacing: 2px;
+      animation: fadeInTitle 2s;
+    }
+    @keyframes fadeInTitle {
+      from { opacity: 0; transform: translateY(-40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .flower-svg {
+      width: 340px;
+      height: 340px;
+      display: block;
+      margin: 0 auto;
+    }
+    /* Animation for petals */
+    .petal {
+      transform-origin: bottom center;
+      opacity: 0;
+      transform: scaleY(0.1) scaleX(0.1);
+      animation: bloomPetal 1.2s forwards;
+    }
+    .petal1 { animation-delay: 0.5s; }
+    .petal2 { animation-delay: 0.8s; }
+    .petal3 { animation-delay: 1.1s; }
+    /* Animation for stem and leaves */
+    .stem, .leaf {
+      opacity: 0;
+      animation: growStem 1s forwards;
+    }
+    .stem { animation-delay: 0.2s; }
+    .leaf1 { animation-delay: 1.3s; }
+    .leaf2 { animation-delay: 1.5s; }
+    .leaf3 { animation-delay: 1.7s; }
+    @keyframes bloomPetal {
+      0% { opacity: 0; transform: scaleY(0.1) scaleX(0.1);}
+      80% { opacity: 1; transform: scaleY(1.1) scaleX(1.1);}
+      100% { opacity: 1; transform: scaleY(1) scaleX(1);}
+    }
+    @keyframes growStem {
+      0% { opacity: 0; stroke-dasharray: 200; stroke-dashoffset: 200;}
+      80% { opacity: 1; stroke-dasharray: 200; stroke-dashoffset: 0;}
+      100% { opacity: 1; stroke-dasharray: 200; stroke-dashoffset: 0;}
+    }
+    /* Glow effect */
+    .glow {
+      filter: drop-shadow(0 0 18px #ffb6c1) drop-shadow(0 0 8px #fff);
+    }
+    /* Fade in text */
+    .subtitle {
+      color: #fff;
+      font-size: 1.3rem;
+      margin-top: 32px;
+      opacity: 0;
+      animation: fadeInSubtitle 1.2s 2.2s forwards;
+      text-shadow: 0 0 10px #fff8, 0 2px 8px #e75480;
+    }
+    @keyframes fadeInSubtitle {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .btn-next {
+      display: inline-block;
+      margin-top: 38px;
+      padding: 12px 38px;
+      background: linear-gradient(90deg, #e75480 0%, #ffe4b5 100%);
+      color: #232526;
+      font-weight: bold;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      box-shadow: 0 2px 12px #e7548050;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 2px solid #fff;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: 0;
+      animation: fadeInBtn 1s 3.2s forwards;
+    }
+    .btn-next:hover {
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px #ffe4b580;
+      background: linear-gradient(90deg, #ffe4b5 0%, #e75480 100%);
+      color: #e75480;
+    }
+    @keyframes fadeInBtn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-border">
+    <div class="title">Ánh yêu ơi</div>
+    <svg class="flower-svg" viewBox="0 0 340 340">
+      <!-- Stems -->
+      <line x1="170" y1="260" x2="170" y2="140" stroke="#e75480" stroke-width="8" class="stem glow"/>
+      <line x1="170" y1="260" x2="120" y2="170" stroke="#e75480" stroke-width="7" class="stem glow"/>
+      <line x1="170" y1="260" x2="220" y2="170" stroke="#e75480" stroke-width="7" class="stem glow"/>
+      <!-- Leaves -->
+      <ellipse cx="140" cy="190" rx="18" ry="8" fill="#ffb6c1" class="leaf leaf1 glow"/>
+      <ellipse cx="200" cy="190" rx="18" ry="8" fill="#ffb6c1" class="leaf leaf2 glow"/>
+      <ellipse cx="170" cy="210" rx="20" ry="10" fill="#ffb6c1" class="leaf leaf3 glow"/>
+      <!-- Petals -->
+      <ellipse cx="120" cy="150" rx="32" ry="18" fill="#ffe4b5" class="petal petal1 glow"/>
+      <ellipse cx="170" cy="130" rx="32" ry="18" fill="#ffe4b5" class="petal petal2 glow"/>
+      <ellipse cx="220" cy="150" rx="32" ry="18" fill="#ffe4b5" class="petal petal3 glow"/>
+      <!-- Flower centers -->
+      <circle cx="120" cy="150" r="10" fill="#e75480" class="glow"/>
+      <circle cx="170" cy="130" r="10" fill="#e75480" class="glow"/>
+      <circle cx="220" cy="150" r="10" fill="#e75480" class="glow"/>
+      <!-- Grass (decorative) -->
+      <path d="M60 300 Q100 250 140 300" stroke="#e75480" stroke-width="4" fill="none" opacity="0.5"/>
+      <path d="M200 300 Q240 250 280 300" stroke="#e75480" stroke-width="4" fill="none" opacity="0.5"/>
+      <path d="M100 320 Q170 250 240 320" stroke="#ffb6c1" stroke-width="3" fill="none" opacity="0.3"/>
+    </svg>
+    <div class="subtitle">Ahnjinwon nhớ em</div>
+    <a href="page2.html" class="btn-next">Tiếp tục &rarr;</a>
+  </div>
+</body>
+</html>
