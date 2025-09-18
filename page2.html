@@ -2,16 +2,13 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>An nee</title>
-  <meta property="og:title" content="An nee 💗">
-  <meta property="og:description" content="An nee 💗">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đêm nay em ngủ ngon nhé</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       min-height: 100vh;
-      background: radial-gradient(ellipse at center, #232526 60%, #ffe4b5 100%);
+      background: radial-gradient(ellipse at center, #000 70%, #232526 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -20,30 +17,24 @@
     }
     .outer-border {
       border: 5px solid #ffb6c1;
-      border-radius: 32px;
+      border-radius: 40px;
       box-shadow: 0 0 40px 10px #ffb6c1a0, 0 0 0 10px #fff1 inset;
-      padding: 24px 16px 24px 16px;
+      padding: 48px 32px 32px 32px;
       background: rgba(255,255,255,0.03);
       backdrop-filter: blur(2px);
-      max-width: 340px;
-      width: 92vw;
-      min-height: 480px;
+      max-width: 420px;
+      width: 100%;
       text-align: center;
       position: relative;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
     .title {
       color: #ffb6c1;
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
       text-shadow: 0 0 18px #fff, 0 2px 8px #e75480;
       letter-spacing: 2px;
       animation: fadeInTitle 2s;
-      word-break: break-word;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -54,15 +45,15 @@
       to { opacity: 1; transform: translateY(0);}
     }
     .gif-frame {
-      width: 80vw;
-      max-width: 260px;
+      width: 180px;
       height: 180px;
-      margin: 0 auto 20px auto;
-      display: block;
-      border-radius: 20px;
+      margin: 0 auto 24px auto;
+      border-radius: 24px;
       overflow: hidden;
       box-shadow: 0 0 24px #ffb6c1a0, 0 0 0 6px #fff2 inset;
+      border: 2px solid #ffe4b5;
       background: #fff;
+      display: flex;
       align-items: center;
       justify-content: center;
       animation: fadeInGif 1.2s;
@@ -73,13 +64,12 @@
     }
     .subtitle {
       color: #ffe4b5;
-      font-size: 1rem;
-      margin-top: 14px;
-      margin-bottom: 8px;
+      font-size: 1.1rem;
+      margin-top: 24px;
+      margin-bottom: 10px;
       opacity: 0;
       animation: fadeInSubtitle 1.2s 1.8s forwards;
       text-shadow: 0 0 10px #fff8, 0 2px 8px #e75480;
-      word-break: break-word;
     }
     @keyframes fadeInSubtitle {
       from { opacity: 0; }
@@ -87,13 +77,13 @@
     }
     .btn-next {
       display: inline-block;
-      margin-top: 18px;
-      padding: 10px 28px;
+      margin-top: 28px;
+      padding: 12px 38px;
       background: linear-gradient(90deg, #e75480 0%, #ffe4b5 100%);
       color: #232526;
       font-weight: bold;
-      border-radius: 24px;
-      font-size: 1rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
       text-decoration: none;
       box-shadow: 0 2px 12px #e7548050;
       transition: transform 0.2s, box-shadow 0.2s;
@@ -114,30 +104,16 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
-    @media (max-width: 600px) {
-      .outer-border {
-        max-width: 94vw;
-        width: 94vw;
-        min-height: 340px;
-        padding: 10px 3vw 10px 3vw;
-      }
-      .title { font-size: 1.2rem; }
-      .subtitle { font-size: 0.95rem; }
-      .btn-next { font-size: 0.95rem; padding: 8px 12vw; }
-      .gif-frame { max-width: 92vw; height: 120px; }
-    }
   </style>
 </head>
 <body>
   <div class="outer-border">
     <div class="title">
-      Đêm nay em ngủ ngon nhé <span style="font-size:2rem;">😘</span>
+      Đêm nay em ngủ ngon nhé <span style="font-size:2.2rem;">😘</span>
     </div>
     <div class="gif-frame">
+      <!-- Thay link ảnh động GIF tại đây -->
       <img src="cute.gif" alt="GIF động" style="width:100%;height:100%;object-fit:cover;">
     </div>
     <div class="subtitle">Chúc em có giấc mơ thật đẹp!</div>
-    <a href="page3.html" class="btn-next">Tiếp tục &rarr;</a>
-  </div>
-</body>
-</html>
+    <a href="page3.html" class="btn-next">Tiếp tục

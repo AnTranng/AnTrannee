@@ -1,42 +1,87 @@
-.outer-border {
-  border: 5px solid #ffb6c1;
-  border-radius: 32px;
-  box-shadow: 0 0 40px 10px #ffb6c1a0, 0 0 0 10px #fff1 inset;
-  padding: 24px 24px 24px 24px; /* tăng padding hai bên */
-  background: rgba(255,255,255,0.03);
-  backdrop-filter: blur(2px);
-  max-width: 340px;
-  width: 95vw; /* giảm width để không sát viền */
-  min-height: 480px;
-  text-align: center;
-  position: relative;
-  margin: 0 auto;
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
-.flower-svg {
-  width: 100%;
-  max-width: 260px;
-  height: auto; /* giữ nguyên tỉ lệ ảnh */
-  aspect-ratio: 340/180; /* giữ tỉ lệ khi trên điện thoại */
-  margin: 0 auto 20px auto;
-  display: block;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 0 24px #ffb6c1a0, 0 0 0 6px #fff2 inset;
-  background: #fff;
+
+h2 {
+  margin-top: 30px;
+  color: white;
+  font-size: 2em;
 }
-@media (max-width: 600px) {
-  .outer-border {
-    max-width: 92vw;
-    width: 92vw;
-    padding: 10px 4vw 10px 4vw; /* padding hai bên lớn hơn */
-    min-height: 340px;
+
+.bouquet {
+  position: relative;
+  width: 200px;
+  height: 250px;
+}
+
+.flower {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: bloom 3s infinite alternate;
+}
+
+/* Trang 1 */
+.flower1 { top: 0; left: 75px; background: #ff69b4; animation-delay: 0s; }
+.flower2 { top: 40px; left: 30px; background: #ffb6c1; animation-delay: 0.5s; }
+.flower3 { top: 40px; right: 30px; background: #ff85a2; animation-delay: 1s; }
+.flower4 { top: 80px; left: 75px; background: #ff1493; animation-delay: 1.5s; }
+
+/* Trang 2 */
+.flower5 { top: 0; left: 75px; background: #ffd700; animation-delay: 0s; }
+.flower6 { top: 40px; left: 30px; background: #ffec8b; animation-delay: 0.5s; }
+.flower7 { top: 40px; right: 30px; background: #ffa500; animation-delay: 1s; }
+.flower8 { top: 80px; left: 75px; background: #ff8c00; animation-delay: 1.5s; }
+
+/* Trang 3 */
+.flower9  { top: 0; left: 75px; background: #adff2f; animation-delay: 0s; }
+.flower10 { top: 40px; left: 30px; background: #7fff00; animation-delay: 0.5s; }
+.flower11 { top: 40px; right: 30px; background: #32cd32; animation-delay: 1s; }
+.flower12 { top: 80px; left: 75px; background: #228b22; animation-delay: 1.5s; }
+
+.stem {
+  position: absolute;
+  bottom: 0;
+  left: 95px;
+  width: 10px;
+  height: 150px;
+  background: green;
+  border-radius: 5px;
+}
+
+@keyframes bloom {
+  from {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0.7;
   }
-  .flower-svg {
-    max-width: 88vw;
-    height: auto;
-    aspect-ratio: 340/180; /* giữ tỉ lệ hoa khi trên điện thoại */
+  to {
+    transform: scale(1.2) rotate(15deg);
+    opacity: 1;
   }
+}
+
+/* Nút chuyển trang */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: white;
+  color: #ff69b4;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff69b4;
+  color: white;
 }
