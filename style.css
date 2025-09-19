@@ -8,57 +8,53 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
 }
-body {
-  transform: scale(1.3);
-  transform-origin: center center; /* giữ cho phóng to từ giữa màn hình */
-}
 
 h2 {
-  margin-top: 30px;
+  margin-top: 40px;              /* 30 → 40 */
   color: white;
-  font-size: 2em;
+  font-size: 2.6em;              /* 2em → 2.6em */
 }
 
 .bouquet {
   position: relative;
-  width: 200px;
-  height: 250px;
+  width: 260px;                  /* 200 → 260 */
+  height: 325px;                 /* 250 → 325 */
 }
 
 .flower {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 65px;                   /* 50 → 65 */
+  height: 65px;                  /* 50 → 65 */
   border-radius: 50%;
   animation: bloom 3s infinite alternate;
 }
 
 /* Trang 1 */
-.flower1 { top: 0; left: 75px; background: #ff69b4; animation-delay: 0s; }
-.flower2 { top: 40px; left: 30px; background: #ffb6c1; animation-delay: 0.5s; }
-.flower3 { top: 40px; right: 30px; background: #ff85a2; animation-delay: 1s; }
-.flower4 { top: 80px; left: 75px; background: #ff1493; animation-delay: 1.5s; }
+.flower1 { top: 0; left: 97px; background: #ff69b4; animation-delay: 0s; }
+.flower2 { top: 52px; left: 39px; background: #ffb6c1; animation-delay: 0.5s; }
+.flower3 { top: 52px; right: 39px; background: #ff85a2; animation-delay: 1s; }
+.flower4 { top: 104px; left: 97px; background: #ff1493; animation-delay: 1.5s; }
 
 /* Trang 2 */
-.flower5 { top: 0; left: 75px; background: #ffd700; animation-delay: 0s; }
-.flower6 { top: 40px; left: 30px; background: #ffec8b; animation-delay: 0.5s; }
-.flower7 { top: 40px; right: 30px; background: #ffa500; animation-delay: 1s; }
-.flower8 { top: 80px; left: 75px; background: #ff8c00; animation-delay: 1.5s; }
+.flower5 { top: 0; left: 97px; background: #ffd700; animation-delay: 0s; }
+.flower6 { top: 52px; left: 39px; background: #ffec8b; animation-delay: 0.5s; }
+.flower7 { top: 52px; right: 39px; background: #ffa500; animation-delay: 1s; }
+.flower8 { top: 104px; left: 97px; background: #ff8c00; animation-delay: 1.5s; }
 
 /* Trang 3 */
-.flower9  { top: 0; left: 75px; background: #adff2f; animation-delay: 0s; }
-.flower10 { top: 40px; left: 30px; background: #7fff00; animation-delay: 0.5s; }
-.flower11 { top: 40px; right: 30px; background: #32cd32; animation-delay: 1s; }
-.flower12 { top: 80px; left: 75px; background: #228b22; animation-delay: 1.5s; }
+.flower9  { top: 0; left: 97px; background: #adff2f; animation-delay: 0s; }
+.flower10 { top: 52px; left: 39px; background: #7fff00; animation-delay: 0.5s; }
+.flower11 { top: 52px; right: 39px; background: #32cd32; animation-delay: 1s; }
+.flower12 { top: 104px; left: 97px; background: #228b22; animation-delay: 1.5s; }
 
 .stem {
   position: absolute;
   bottom: 0;
-  left: 95px;
-  width: 10px;
-  height: 150px;
+  left: 124px;                   /* 95 → 124 */
+  width: 13px;                   /* 10 → 13 */
+  height: 195px;                 /* 150 → 195 */
   background: green;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 @keyframes bloom {
@@ -75,13 +71,14 @@ h2 {
 /* Nút chuyển trang */
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 26px;              /* 20 → 26 */
+  padding: 13px 26px;            /* 10x20 → 13x26 */
   background: white;
   color: #ff69b4;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 8px;
+  font-size: 1.3em;              /* thêm cho nút to hơn */
+  border-radius: 10px;           /* 8 → 10 */
   transition: 0.3s;
 }
 
