@@ -8,6 +8,10 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
 }
+body {
+  transform: scale(1.3);
+  transform-origin: center center; /* giữ cho phóng to từ giữa màn hình */
+}
 
 h2 {
   margin-top: 30px;
