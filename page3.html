@@ -15,21 +15,38 @@
       font-family: 'Segoe UI', sans-serif;
       overflow: hidden;
     }
+
+    /* Hiệu ứng trái tim */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      color: #ff6b81;
+      font-size: 22px;
+      animation: rise 6s linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes rise {
+      0% { transform: translateY(0) scale(0.8); opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.4); opacity: 0; }
+    }
+
     .outer-border {
       border: 5px solid #ffb6c1;
       border-radius: 40px;
       box-shadow: 0 0 40px 10px #ffb6c1a0, 0 0 0 10px #fff1 inset;
-      padding: 48px 32px 32px 32px;
+      padding: 62px 42px 42px 42px;
       background: rgba(255,255,255,0.03);
       backdrop-filter: blur(2px);
-      max-width: 420px;
+      max-width: 546px;
       width: 100%;
       text-align: center;
       position: relative;
+      transform: scale(1.3);
     }
     .title {
       color: #ffb6c1;
-      font-size: 2rem;
+      font-size: 2.6rem;
       font-weight: bold;
       margin-bottom: 24px;
       text-shadow: 0 0 18px #fff, 0 2px 8px #e75480;
@@ -41,8 +58,8 @@
       to { opacity: 1; transform: translateY(0);}
     }
     .img-frame {
-      width: 180px;
-      height: 180px;
+      width: 234px;
+      height: 234px;
       margin: 0 auto 24px auto;
       border-radius: 24px;
       overflow: hidden;
@@ -60,7 +77,7 @@
     }
     .subtitle {
       color: #ffe4b5;
-      font-size: 1.1rem;
+      font-size: 1.5rem;
       margin-top: 24px;
       margin-bottom: 10px;
       opacity: 0;
@@ -74,18 +91,16 @@
     .btn {
       display: inline-block;
       margin-top: 28px;
-      padding: 12px 38px;
+      padding: 14px 46px;
       background: linear-gradient(90deg, #e75480 0%, #ffe4b5 100%);
       color: #232526;
       font-weight: bold;
       border-radius: 30px;
-      font-size: 1.1rem;
+      font-size: 1.4rem;
       text-decoration: none;
       box-shadow: 0 2px 12px #e7548050;
       transition: transform 0.2s, box-shadow 0.2s;
       border: 2px solid #fff;
-      position: relative;
-      overflow: hidden;
       cursor: pointer;
       opacity: 0;
       animation: fadeInBtn 1s 2.8s forwards;
@@ -103,12 +118,28 @@
   </style>
 </head>
 <body>
+  <!-- Trái tim bay nền -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 15 + "px";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+
   <div class="outer-border">
     <div class="title">Em ôn thi thật tốt nhé</div>
     <div class="img-frame">
-      <!-- Thay link ảnh tại đây, ví dụ: exam.png hoặc link ảnh online -->
       <img src="AnvaAnh.png" alt="Ảnh động" style="width:100%;height:100%;object-fit:cover;">
     </div>
     <div class="subtitle">Anh chúc em thi may mắn</div>
-    <a href="index.html" class="btn">Anh yêu em<span style="font-size:1.3em;">❤️</span></a>
+    <a href="index.html" class="btn">Anh yêu em ❤️</a>
   </div>
+</body>
+</html>
